@@ -25,7 +25,7 @@ class BanCheck(commands.Cog):
     """
 
     __author__ = "PhasecoreX"
-    __version__ = "2.6.2"
+    __version__ = "2.6.3"
 
     default_global_settings: ClassVar[dict[str, int]] = {
         "schema_version": 0,
@@ -774,7 +774,7 @@ class BanCheck(commands.Cog):
                 try:
                     reasons = []
                     for name, reason in banned_services.items():
-                    reasons.append(f"{name} ({reason})")
+                        reasons.append(f"{name} ({reason})")
                     await guild.ban(
                         member,
                         reason=f"BanCheck auto ban: {', '.join(reasons)}",
