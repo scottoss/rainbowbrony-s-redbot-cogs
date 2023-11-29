@@ -43,9 +43,9 @@ class Antiraid:
                 #     "banned": false
                 # }
                 data = await resp.json()
-                if "banned" in data:
+                if "bandate" in data:
                     # "banned" will always be in a successful lookup
-                    if data["bandate"]:
+                    if data["banned"]:
                         return LookupResult(
                             Antiraid.SERVICE_NAME,
                             "ban",
@@ -56,8 +56,8 @@ class Antiraid:
                      LookupResult(Antiraid.SERVICE_NAME, "clear")
                     )
                 # Otherwise, failed lookup
-                return LookupResult(Antiraid.SERVICE_NAME, "error")
-
+                #return LookupResult(Antiraid.SERVICE_NAME, "error")
+                return LookupResult(Antiraid.SERVICE_NAME, "clear")
         except aiohttp.ClientConnectionError:
             return LookupResult(
                 Antiraid.SERVICE_NAME,
