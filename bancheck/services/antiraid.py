@@ -45,14 +45,16 @@ class Antiraid:
                 data = await resp.json()
                 if "banned" in data:
                     # "banned" will always be in a successful lookup
-                    if data["banned"]:
+                    if data["banned"] = true:
                         return LookupResult(
                             Antiraid.SERVICE_NAME,
                             "ban",
                             reason=data["reason"],
                             proof_url=data["proof"] if "proof" in data else None,
                         )
-                    LookupResult(Antiraid.SERVICE_NAME, "clear")
+                    else(
+                     LookupResult(Antiraid.SERVICE_NAME, "clear")
+                    )
                 # Otherwise, failed lookup
                 return LookupResult(Antiraid.SERVICE_NAME, "error")
 
