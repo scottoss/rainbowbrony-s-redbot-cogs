@@ -1,7 +1,7 @@
 {
     "name": "BanCheck",
     "author": [
-        "PhasecoreX (PhasecoreX#0635)"
+        "PhasecoreX (PhasecoreX#0635) (updated by rainbowbrony)"
     ],
     "short": "Automatically check users against multiple global ban lists.",
     "description": "This cog allows server admins to check their members against multiple external ban lists. It can also automatically check new members that join the server, and optionally ban them if they appear in a list.",
