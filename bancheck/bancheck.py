@@ -25,7 +25,7 @@ class BanCheck(commands.Cog):
     """
 
     __author__ = "PhasecoreX"
-    __version__ = "2.6.3"
+    __version__ = "2.6.4"
 
     default_global_settings: ClassVar[dict[str, int]] = {
         "schema_version": 0,
