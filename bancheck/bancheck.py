@@ -772,9 +772,9 @@ class BanCheck(commands.Cog):
                         f"you have automatically been banned from {member.guild}."
                     )
                 try:
-                    reasons = [
-                        f"{name} ({reason})" for name, reason in banned_services.items()
-                    ]
+                    reasons = []
+                    for name, reason in banned_services.items():
+                        reasons.append(f"{name} ({reason})")
                     await guild.ban(
                         member,
                         reason=f"BanCheck auto ban: {', '.join(reasons)}",
