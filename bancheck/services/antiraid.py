@@ -52,7 +52,7 @@ class Antiraid:
                             reason=data["reason"],
                             proof_url=data["proof"] if "proof" in data else None,
                         )
-                    else(
+                    else: (
                      LookupResult(Antiraid.SERVICE_NAME, "clear")
                     )
                 # Otherwise, failed lookup
