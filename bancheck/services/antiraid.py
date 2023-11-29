@@ -45,7 +45,7 @@ class Antiraid:
                 data = await resp.json()
                 if "banned" in data:
                     # "banned" will always be in a successful lookup
-                    if data["banned"] = true:
+                    if data["banned"] == true:
                         return LookupResult(
                             Antiraid.SERVICE_NAME,
                             "ban",
